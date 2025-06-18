@@ -211,6 +211,14 @@ li {
   border: 1px solid darkcyan;
 }
 
+.newsletter, .story {
+  background-color: var(--clr-neutral-100);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .section-cards {
   display: grid;
   grid-template-columns:
@@ -219,14 +227,18 @@ li {
   gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 1rem 0rem 1rem 0rem;
 
   .card {
-    display: grid;
+    display: block;
     padding: 1rem;
 
     background-color: var(--clr-primary-light-1);
 
-    border: 1px solid black;
+    h3, p {
+      margin-bottom: 0.2rem;
+      padding: 0.2rem;
+    }
 
     .card-tags {
       display: flex;
@@ -244,46 +256,69 @@ li {
       .tag-blommor {
         background-color: var(--clr-flower);
       }
+
       .tag-atbart {
         background-color: var(--clr-edible);
       }
+
       .tag-gronska {
         background-color: var(--clr-green);
       }
+
       .tag-solalskande {
         background-color: var(--clr-sunloving);
       }
+
       .tag-lattodlat {
         background-color: var(--clr-easy);
       }
+
       .tag-dekorativ {
         background-color: var(--clr-decorative);
       }
+
       .tag-talig {
         background-color: var(--clr-robust);
       }
+
       .tag-kryddor {
         background-color: var(--clr-air);
       }
+
       .tag-doftande {
         background-color: var(--clr-fragrant);
       }
+
       .tag-snabbvaxande {
         background-color: var(--clr-fast);
       }
+
       .tag-luftfuktande {
         background-color: var(--clr-air);
       }
+
       .tag-fargstark {
         background-color: var(--clr-colorful);
       }
     }
   }
-}
 
-.newsletter, .story {
-  background-color: var(--clr-neutral-100);
-  text-align: center;
+  .card-footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      padding: 0.2rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .card-username-date {
+      margin: 0.2rem;
+      padding: 0.2rem;
+    }
+  }
 }
 
 .footer-bottom {
