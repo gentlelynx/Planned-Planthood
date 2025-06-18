@@ -5,6 +5,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* remove default spacing */
@@ -156,7 +157,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--clr-accent);
+  color: var(--clr-accent-light-1);
 
   &:hover,
   &:focus-visible {
@@ -169,15 +170,14 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
-  display: grid;
-  margin: 0rem 5rem;
+  width: 100%;
 }
 
 header {
   display: flex;
-  position: relative;
-  top: 0;
-  border: 1px solid black;
+  justify-content: center;
+
+  border: 1px solid rgb(161, 84, 84);
 
   figure.logo-top {
     border: 1px solid black;
@@ -201,40 +201,103 @@ li {
   border: 1px solid black;
 }
 
+.article-top, .section-cards {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .article-top {
-  .collage-top, .newsletter, .story {
-    text-align: center;
-    border: 1px solid darkcyan;
-  }
+  text-align: center;
+  border: 1px solid darkcyan;
 }
 
 .section-cards {
   display: grid;
-  
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20em 20em 20em;
-  grid-auto-flow: column;
-  gap: 0.5em;
+  grid-template-columns:
+    /*https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+    repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 
   .card {
     display: grid;
+    padding: 1rem;
+
+    background-color: var(--clr-primary-light-1);
+
     border: 1px solid black;
 
-    figure, ul, li, h3, p, footer {
-      border: 1px solid red;
+    .card-tags {
+      display: flex;
+      /* flex-flow is shorthand, see flex-wrap for more detail*/
+      flex-flow: row wrap;
+      margin: 1rem 0rem 1rem 0rem;
+
+      li {
+        margin: 0.1rem;
+        padding: 0.4rem;
+        border-radius: 20px;
+        align-self: flex-end;
+      }
+
+      .tag-blommor {
+        background-color: var(--clr-flower);
+      }
+      .tag-atbart {
+        background-color: var(--clr-edible);
+      }
+      .tag-gronska {
+        background-color: var(--clr-green);
+      }
+      .tag-solalskande {
+        background-color: var(--clr-sunloving);
+      }
+      .tag-lattodlat {
+        background-color: var(--clr-easy);
+      }
+      .tag-dekorativ {
+        background-color: var(--clr-decorative);
+      }
+      .tag-talig {
+        background-color: var(--clr-robust);
+      }
+      .tag-kryddor {
+        background-color: var(--clr-air);
+      }
+      .tag-doftande {
+        background-color: var(--clr-fragrant);
+      }
+      .tag-snabbvaxande {
+        background-color: var(--clr-fast);
+      }
+      .tag-luftfuktande {
+        background-color: var(--clr-air);
+      }
+      .tag-fargstark {
+        background-color: var(--clr-colorful);
+      }
     }
   }
 }
 
+.newsletter, .story {
+  background-color: var(--clr-neutral-100);
+  text-align: center;
+}
+
 .footer-bottom {
+  display: flex;
   position: relative;
   bottom: 0;
-  border: 2px solid blue;
-  display: flex;
 
-  article {
-    section {
-      border: 1px solid orange;
-    }
+  background-color: var(--clr-green-400);
+
+  .text-footer, .aside-bottom {
+    margin: 0 auto;
+  }
+
+  .text-footer {
+    color: var(--clr-green-100);
   }
 }
