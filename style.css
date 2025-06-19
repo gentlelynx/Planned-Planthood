@@ -212,11 +212,52 @@ li {
 }
 
 .newsletter, .story {
+  display: block;
   background-color: var(--clr-neutral-100);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.newsletter {
+  h2 {
+    max-width: 400px;
+    margin: 2rem 2rem;
+  }
+  .newsletter-form {
+    width: 25%;
+    height: fit-content;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 25px;
+
+    .email {
+      margin: 0.1rem 0.48rem;
+      border: none;
+      background-color: var(--clr-neutral-100);
+      color: var(--clr-neutral-400)
+        }
+
+    .submit {
+      margin: 0.2rem;
+      padding: 0.2rem;
+      border-radius: 15px;
+      background-color: var(--clr-accent);
+    }
+
+    /*Hides the form label visually: https://www.w3.org/WAI/tutorials/forms/labels/*/
+    .newsletter-hidden-label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+    }
+  }
 }
 
 .section-cards {

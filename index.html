@@ -57,6 +57,16 @@
     <!-- Nyhetsbrev -->
     <section class="newsletter">
       <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+
+      <!-- Formulär -->
+      <div class="newsletter-form">
+      <form action="/submit" method="POST" aria-labelledby="nyhersbrevsformulär">
+        <label for="email" class="newsletter-hidden-label">Ditt e-mail: </label>
+        <input type="email" name="email" class="email" placeholder="email@domain.com">
+        <input type="button" class="submit" value="Skicka!">
+      </form>
+      </div>
+
       <figure class="img-newsletter">
         <img src="#" alt="-">
       </figure>
@@ -427,7 +437,7 @@
 
   <!-- Footer -->
   <footer class="footer-bottom">
-    <section class="text-footer">
+    <section class="text-footer" aria-label="Om företaget">
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias
         perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius
