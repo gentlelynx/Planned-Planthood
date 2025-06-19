@@ -212,9 +212,7 @@ li {
 }
 
 .newsletter, .story {
-  display: block;
   background-color: var(--clr-neutral-100);
-  text-align: center;
   padding: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
